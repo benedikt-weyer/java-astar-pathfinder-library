@@ -1,7 +1,7 @@
 package com.benediktweyer.astarpathfinder;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Node {
 	private Node parentNode;
@@ -15,7 +15,7 @@ public class Node {
 	private boolean theWay=false;
 	private boolean passable=true;
 
-	private List<NodeRelation> nodeRelations = new ArrayList<>();
+	private Set<NodeRelation> nodeRelations = new HashSet<>();
 
 	public Node() {
 
@@ -77,7 +77,7 @@ public class Node {
 		this.nodeType = nodeType;
 	}
 
-	public List<NodeRelation> getNodeRelations() {
+	public Set<NodeRelation> getNodeRelations() {
 		return nodeRelations;
 	}
 

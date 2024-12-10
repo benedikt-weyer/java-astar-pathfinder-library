@@ -19,7 +19,7 @@ public class AStarPathfinder {
 	private Set<Node> openSet = new HashSet<>();
 	private Set<Node> closedSet = new HashSet<>();
 
-    public AStarPathfinder(List<Node> nodes, Node startNode, Node endNode) {
+    public AStarPathfinder(Set<Node> nodes, Node startNode, Node endNode) {
         this.nodes = nodes;
         this.startNode = startNode;
         this.endNode = endNode;
