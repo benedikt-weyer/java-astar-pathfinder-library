@@ -31,7 +31,8 @@ public class AStarPathfinderTest {
         AStarPathfinder aStarPathfinder = new AStarPathfinder(allNodes, n1, n2);
 
         //calculate path
-        bool foundPath = aStarPathfinder.calculate();
+        aStarPathfinder.calculate();
+        boolean foundPath = aStarPathfinder.calculate();
 
         //check for success
         assertThat(foundPath)
