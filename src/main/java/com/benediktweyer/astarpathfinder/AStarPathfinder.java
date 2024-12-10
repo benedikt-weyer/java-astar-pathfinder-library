@@ -6,8 +6,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class AStarSearch {
-    private List<Node> nodes;
+public class AStarPathfinder {
+    private Set<Node> nodes;
     private Node startNode;
     private Node endNode;
 
@@ -19,7 +19,7 @@ public class AStarSearch {
 	private Set<Node> openSet = new HashSet<>();
 	private Set<Node> closedSet = new HashSet<>();
 
-    public AStarSearch(List<Node> nodes, Node startNode, Node endNode) {
+    public AStarPathfinder(List<Node> nodes, Node startNode, Node endNode) {
         this.nodes = nodes;
         this.startNode = startNode;
         this.endNode = endNode;
