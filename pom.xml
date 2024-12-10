@@ -6,11 +6,35 @@
 
   <groupId>com.benediktweyer.astarpathfinder</groupId>
   <artifactId>astarpathfinderlibrary</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>0.0.1</version>
 
   <name>astarpathfinderlibrary</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <description>
+    This project is a library for finding the shortest path with the use of an flexible astar-algorithm.
+  </description>
+  <url>https://github.com/benedikt-weyer/java-astar-pathfinder-library</url>
+
+  <licenses>
+    <license>
+      <name>The GNU General Public License, Version 3</name>
+      <url>https://www.gnu.org/licenses/gpl-3.0.html#license-text</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Benedikt Weyer</name>
+      <email>bw.development@pm.me</email>
+      <organization>Benedikt Weyer</organization>
+      <organizationUrl>https://benediktweyer.com</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:benedikt-weyer/java-astar-pathfinder-library.git</connection>
+    <developerConnection>scm:git:ssh://github.com:benedikt-weyer/java-astar-pathfinder-library.git</developerConnection>
+    <url>https://github.com/benedikt-weyer/java-astar-pathfinder-library/tree/main</url>
+  </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
