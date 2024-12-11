@@ -25,12 +25,10 @@ public class AStarPathfinder {
     /**
      * Constructor for the pathfinder
      * 
-     * @param nodes a set of all nodes with set h-costs and relations
      * @param startNode the starting node of the path
      * @param endNode the end node of the path
      */
-    public AStarPathfinder(Set<Node> nodes, Node startNode, Node endNode) {
-        this.nodes = nodes;
+    public AStarPathfinder(Node startNode, Node endNode) {
         this.startNode = startNode;
         this.endNode = endNode;
 
