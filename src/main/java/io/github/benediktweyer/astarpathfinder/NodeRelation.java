@@ -1,10 +1,18 @@
 package io.github.benediktweyer.astarpathfinder;
 
+/**
+ * Explains the relation of a node who has this object and the specified target node.
+ * Travel costs between those nodes can be specified.
+ */
 public class NodeRelation {
     private Node targetNode;
     private double travelCosts;
 
-    
+    /**
+     * Constructor for a node relation
+     * @param targetNode the target node that the node who has this object is linked to
+     * @param travelCosts travel costs from node who has this object to target node
+     */
     public NodeRelation(Node targetNode, double travelCosts) {
         this.targetNode = targetNode;
         this.travelCosts = travelCosts;

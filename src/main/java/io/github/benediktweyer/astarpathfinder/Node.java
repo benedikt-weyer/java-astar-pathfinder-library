@@ -3,6 +3,9 @@ package io.github.benediktweyer.astarpathfinder;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * A node for use in the a star pathfinder
+ */
 public class Node {
 	private Node parentNode;
 	
@@ -15,6 +18,9 @@ public class Node {
 
 	private Set<NodeRelation> nodeRelations = new HashSet<>();
 
+	/**
+	 * Create blank node
+	 */
 	public Node(){}
 
 	public Node getParentNode(){
