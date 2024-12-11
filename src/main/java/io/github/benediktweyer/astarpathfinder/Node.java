@@ -10,8 +10,6 @@ public class Node {
 	private double FCost=Double.MAX_VALUE;
 	private double HCost;
 	
-	private NodeType nodeType = NodeType.PASSABLE;
-	
 	private boolean theWay=false;
 	private boolean passable=true;
 
@@ -67,21 +65,13 @@ public class Node {
 		this.passable = passable;
 	}
 
-	public NodeType getNodeType(){
-		return nodeType;
-	}
-
-	public void setNodeType(NodeType nodeType){
-		this.nodeType = nodeType;
-	}
-
 	public Set<NodeRelation> getNodeRelations(){
 		return nodeRelations;
 	}
 
 	@Override
 	public String toString() {
-		return "Node [GCost=" + GCost + ", FCost=" + FCost + ", HCost=" + HCost + ", nodeType=" + nodeType + ", theWay="
+		return "Node [GCost=" + GCost + ", FCost=" + FCost + ", HCost=" + HCost + ", theWay="
 				+ theWay + ", passable=" + passable + ", nodeRelations=" + nodeRelations + "]";
 	}
 }

@@ -33,6 +33,6 @@ public class NodeRelation {
 
     @Override
     public String toString() {
-        return "NodeRelation [targetNode=" + targetNode.getNodeType() + ", travelCosts=" + travelCosts + "]";
+        return "NodeRelation [targetNode=" + targetNode.hashCode() + ", travelCosts=" + travelCosts + "]";
     }
 }
