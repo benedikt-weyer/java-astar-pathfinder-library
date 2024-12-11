@@ -35,6 +35,4 @@ public class NodeRelation {
     public String toString() {
         return "NodeRelation [targetNode=" + targetNode.getNodeType() + ", travelCosts=" + travelCosts + "]";
     }
-
-    
 }

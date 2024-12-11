@@ -17,67 +17,65 @@ public class Node {
 
 	private Set<NodeRelation> nodeRelations = new HashSet<>();
 
-	public Node() {
+	public Node(){}
 
-	}
-
-	public Node getParentNode() {
+	public Node getParentNode(){
 		return parentNode;
 	}
 
-	public void setParentNode(Node parentNode) {
+	public void setParentNode(Node parentNode){
 		this.parentNode = parentNode;
 	}
 
-	public double getGCost() {
+	public double getGCost(){
 		return GCost;
 	}
 
-	public void setGCost(double gCost) {
+	public void setGCost(double gCost){
 		GCost = gCost;
 	}
 
-	public double getFCost() {
+	public double getFCost(){
 		return FCost;
 	}
 
-	public void setFCost(double fCost) {
+	public void setFCost(double fCost){
 		FCost = fCost;
 	}
 
-	public double getHCost() {
+	public double getHCost(){
 		return HCost;
 	}
 
-	public void setHCost(double hCost) {
+	public void setHCost(double hCost){
 		HCost = hCost;
 	}
 
-	public boolean isTheWay() {
+	public boolean isTheWay(){
 		return theWay;
 	}
 
-	public void setTheWay(boolean theWay) {
+	public void setTheWay(boolean theWay){
 		this.theWay = theWay;
 	}
 
-	public boolean isPassable() {
+	public boolean isPassable(){
 		return passable;
 	}
 
-	public void setPassable(boolean passable) {
+	public void setPassable(boolean passable){
 		this.passable = passable;
 	}
 
-	public NodeType getNodeType() {
+	public NodeType getNodeType(){
 		return nodeType;
 	}
 
-	public void setNodeType(NodeType nodeType) {
+	public void setNodeType(NodeType nodeType){
 		this.nodeType = nodeType;
 	}
 
-	public Set<NodeRelation> getNodeRelations() {
+	public Set<NodeRelation> getNodeRelations(){
 		return nodeRelations;
 	}
 
@@ -86,7 +84,4 @@ public class Node {
 		return "Node [GCost=" + GCost + ", FCost=" + FCost + ", HCost=" + HCost + ", nodeType=" + nodeType + ", theWay="
 				+ theWay + ", passable=" + passable + ", nodeRelations=" + nodeRelations + "]";
 	}
-	
-	
-	
 }

@@ -11,15 +11,14 @@ public class AStarPathfinder {
     private Node startNode;
     private Node endNode;
 
-    private boolean foundPath = false;
 
-    private double hCostMultiplier = 2;
-
-    //private List<Node> allList = new ArrayList<>();
 	private Set<Node> openSet = new HashSet<>();
 	private Set<Node> closedSet = new HashSet<>();
 
+    private double hCostMultiplier = 2;
     private Node currentNode = null;
+    private boolean foundPath = false;
+
 
     /**
      * Constructor for the pathfinder
@@ -27,14 +26,13 @@ public class AStarPathfinder {
      * @param startNode the starting node of the path
      * @param endNode the end node of the path
      */
-    public AStarPathfinder(Node startNode, Node endNode) {
+    public AStarPathfinder(Node startNode, Node endNode){
         this.startNode = startNode;
         this.endNode = endNode;
 
         this.currentNode = startNode;
         this.closedSet.add(startNode);
     }
-
 
     
     /** 
@@ -52,8 +50,10 @@ public class AStarPathfinder {
         return true;
     }
 
+
     /**
      * Calculates the next step of the pathfinding algorithm.
+     * 
      * @return if path was found
      */
     public boolean calculateNextStep(){
@@ -85,7 +85,6 @@ public class AStarPathfinder {
             }
         }
 
-
         Node nextNode = openSet.stream()
             .min(
                 Comparator.comparingDouble(Node::getFCost)
@@ -93,12 +92,9 @@ public class AStarPathfinder {
                 )
             .orElse(null);
 
-        System.out.println(String.format("Next Node: %s\n", nextNode));
-
         if(nextNode != null){
             currentNode = nextNode;
         }
-        
 
         //check for end node
         if(currentNode.equals(endNode)){
@@ -107,15 +103,15 @@ public class AStarPathfinder {
 
             //backtrace path
             backtraceFoundPath(currentNode);
-            
         }
-
 
         return false;
     }
 
+
     /**
      * Backtraces found path and marks it as the way
+     * 
      * @param endNode the end node
      */
     private void backtraceFoundPath(Node endNode){
@@ -130,19 +126,22 @@ public class AStarPathfinder {
         startNode.setTheWay(true);
     }
 
+
     /**
      * Get the open set
+     * 
      * @return open set
      */
-    public Set<Node> getOpenSet() {
+    public Set<Node> getOpenSet(){
         return openSet;
     }
 
      /**
      * Get the closed set
+     * 
      * @return closed set
      */
-    public Set<Node> getClosedSet() {
+    public Set<Node> getClosedSet(){
         return closedSet;
     }
 }
