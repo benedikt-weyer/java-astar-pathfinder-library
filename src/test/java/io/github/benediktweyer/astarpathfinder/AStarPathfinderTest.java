@@ -28,7 +28,7 @@ public class AStarPathfinderTest {
         allNodes.add(n2);
 
         //create pathfinder instance
-        AStarPathfinder aStarPathfinder = new AStarPathfinder(allNodes, n1, n2);
+        AStarPathfinder aStarPathfinder = new AStarPathfinder(n1, n2);
 
         //calculate path
         boolean foundPath = aStarPathfinder.calculate();
