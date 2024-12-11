@@ -1,4 +1,4 @@
-package com.benediktweyer.astarpathfinder;
+package io.github.benediktweyer.astarpathfinder;
 
 import java.util.ArrayList;
 import java.util.Comparator;
