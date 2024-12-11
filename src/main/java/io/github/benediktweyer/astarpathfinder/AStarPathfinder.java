@@ -6,6 +6,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Tries to find the shortest path using the a-star algorithm
+ */
 public class AStarPathfinder {
     private Set<Node> nodes;
     private Node startNode;
@@ -21,7 +24,13 @@ public class AStarPathfinder {
 
     private Node currentNode = null;
 
-
+    /**
+     * Constructor for the pathfinder
+     * 
+     * @param nodes a set of all nodes with set h-costs and relations
+     * @param startNode the starting node of the path
+     * @param endNode the end node of the path
+     */
     public AStarPathfinder(Set<Node> nodes, Node startNode, Node endNode) {
         this.nodes = nodes;
         this.startNode = startNode;
@@ -32,6 +41,12 @@ public class AStarPathfinder {
     }
 
 
+    
+    /** 
+     * Calculates the path.
+     * 
+     * @return if path was found
+     */
     public boolean calculate(){
 
         boolean pathFound = false;
@@ -42,6 +57,10 @@ public class AStarPathfinder {
         return true;
     }
 
+    /**
+     * Calculates the next step of the pathfinding algorithm.
+     * @return if path was found
+     */
     public boolean calculateNextStep(){
         if(foundPath) return true;
 
@@ -100,6 +119,10 @@ public class AStarPathfinder {
         return false;
     }
 
+    /**
+     * Backtraces found path and marks it as the way
+     * @param endNode the end node
+     */
     private void backtraceFoundPath(Node endNode){
 
         Node nextBacktraceNode = endNode;
@@ -112,14 +135,19 @@ public class AStarPathfinder {
         startNode.setTheWay(true);
     }
 
+    /**
+     * Get the open set
+     * @return open set
+     */
     public Set<Node> getOpenSet() {
         return openSet;
     }
 
+     /**
+     * Get the closed set
+     * @return closed set
+     */
     public Set<Node> getClosedSet() {
         return closedSet;
     }
-    
-
-    
 }
