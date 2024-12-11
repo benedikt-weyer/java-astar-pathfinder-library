@@ -8,7 +8,6 @@ import java.util.Set;
  * Tries to find the shortest path using the a-star algorithm
  */
 public class AStarPathfinder {
-    private Set<Node> nodes;
     private Node startNode;
     private Node endNode;
 
