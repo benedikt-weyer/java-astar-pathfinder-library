@@ -19,6 +19,9 @@ public class AStarPathfinder {
 	private Set<Node> openSet = new HashSet<>();
 	private Set<Node> closedSet = new HashSet<>();
 
+    private Node currentNode = null;
+
+
     public AStarPathfinder(Set<Node> nodes, Node startNode, Node endNode) {
         this.nodes = nodes;
         this.startNode = startNode;
@@ -29,9 +32,17 @@ public class AStarPathfinder {
     }
 
 
-    private Node currentNode = null;
-
     public boolean calculate(){
+
+        boolean pathFound = false;
+        while(!pathFound){
+            pathFound = calculateNextStep();
+        }
+
+        return true;
+    }
+
+    public boolean calculateNextStep(){
         if(foundPath) return true;
 
         //move current node to closed list
